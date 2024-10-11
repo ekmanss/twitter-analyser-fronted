@@ -1,5 +1,5 @@
-import * as React from "react";
 import { Button } from "@/components/ui/button";
+import * as React from "react";
 import { Link } from "react-router-dom";
 
 export default function IndexPage() {
