@@ -1,3 +1,5 @@
+import * as React from "react";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export default function IndexPage() {
@@ -7,16 +9,24 @@ export default function IndexPage() {
 			<div>
 				<ul>
 					<li>
-						<Link to="/sign-up">Sign Up</Link>
+						<Link to="/sign-up">
+							<Button variant="outline">Sign Up</Button>
+						</Link>
 					</li>
 					<li>
-						<Link to="/sign-in">Sign In</Link>
+						<Link to="/sign-in">
+							<Button>Sign In</Button>
+						</Link>
 					</li>
 					<li>
-						<Link to="/contact">Contact</Link>
+						<Link to="/contact">
+							<Button variant="secondary">Contact</Button>
+						</Link>
 					</li>
 					<li>
-						<Link to="/dashboard">Dashboard</Link>
+						<Link to="/dashboard">
+							<Button variant="destructive">Dashboard</Button>
+						</Link>
 					</li>
 				</ul>
 			</div>
