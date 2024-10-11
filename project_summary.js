@@ -1,22 +1,16 @@
-import { generateRepoContext } from "ekmanss-js-tools";
+import {generateRepoContext} from "ekmanss-js-tools";
 
 async function main() {
-	const params = {
-		repoPath: "/Users/linchuan/temp/clerk-react",
-		outputFile: "output15.md",
-		options: {
-			treeIgnorePatterns: [],
-			contentIgnorePatterns: [
-				"**/*.lock",
-				"**/*.svg",
-				".github/",
-				"README.md",
-				"LICENSE",
-			],
-		},
-	};
+    const params = {
+        repoPath: "./",
+        outputFile: "output.md",
+        options: {
+            treeIgnorePatterns: ["**/.git/**"],
+            contentIgnorePatterns: ["**/.git/**", "**/*.lock", "**/*.svg", ".github/**", "README.md", "LICENSE", "pnpm-lock.yaml"],
+        },
+    };
 
-	const repoContext = generateRepoContext(params);
+    const repoContext = generateRepoContext(params);
 }
 
 main();
