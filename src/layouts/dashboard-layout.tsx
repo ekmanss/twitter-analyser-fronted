@@ -1,6 +1,8 @@
-import { useAuth } from "@clerk/clerk-react";
 import * as React from "react";
+import { useAuth } from "@clerk/clerk-react";
 import { Outlet, useNavigate } from "react-router-dom";
+import Sidebar from "@/components/layout/sidebar";
+import Header from "@/components/layout/header";
 
 export default function DashboardLayout() {
 	const { userId, isLoaded } = useAuth();
@@ -16,5 +18,13 @@ export default function DashboardLayout() {
 
 	if (!isLoaded) return "Loading...";
 
-	return <Outlet />;
+	return (
+		<div className="flex">
+			<Sidebar />
+			<main className="w-full flex-1 overflow-hidden">
+				<Header />
+				<Outlet />
+			</main>
+		</div>
+	);
 }

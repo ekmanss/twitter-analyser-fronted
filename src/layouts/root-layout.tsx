@@ -1,10 +1,8 @@
+import * as React from "react";
 import {
 	ClerkProvider,
-	SignedIn,
-	SignedOut,
-	UserButton,
 } from "@clerk/clerk-react";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -50,10 +48,9 @@ export default function RootLayout() {
 				{/*		</div>*/}
 				{/*	</nav>*/}
 				{/*</div>*/}
-
 			</header>
 			<main>
-				<Outlet/>
+				<Outlet />
 			</main>
 		</ClerkProvider>
 	);
