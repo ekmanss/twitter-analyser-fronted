@@ -1,4 +1,3 @@
-import * as React from "react";
 import PageContainer from "@/components/layout/page-container";
 import { Link } from "react-router-dom";
 
