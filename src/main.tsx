@@ -10,7 +10,7 @@ import RootLayout from "./layouts/root-layout";
 // Import the components
 import IndexPage from "./routes";
 import ContactPage from "./routes/contact";
-import DashboardPage from "./routes/dashboard";
+import { DashboardPage } from "./routes/dashboard";
 import InvoicesPage from "./routes/dashboard.invoices";
 import SignInPage from "./routes/sign-in";
 import SignUpPage from "./routes/sign-up";
