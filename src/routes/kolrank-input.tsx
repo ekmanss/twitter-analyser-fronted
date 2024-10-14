@@ -222,7 +222,8 @@ const templateJson = {
         twitter: "Ed_x0101",
         twitter_avatar:
             "https://pbs.twimg.com/profile_images/1588828286464888832/RRN2JuTl_400x400.jpg",
-        score: 79
+        score: 79,
+        recommendedNum: 30
     },
     geju_raw: {
         kol_name: "韩跑跑",

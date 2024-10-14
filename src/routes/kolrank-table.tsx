@@ -221,7 +221,7 @@ const KolRankTable: React.FC<any> = ({data}) => {
                             MozOsxFontSmoothing: 'grayscale',
                         }}
                     >
-                        26个
+                        {laomo.recommendedNum}个
                     </div>
                 </div>
             </div>
