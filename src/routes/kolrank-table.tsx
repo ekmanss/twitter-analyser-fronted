@@ -108,7 +108,7 @@ const KolRankTable: React.FC<any> = ({data}) => {
                                             <div className="text-gray-400">@{kol.twitter}</div>
                                         </div>
                                     </div>
-                                    <div className="w-1/4 font-bold">{kol.score}</div>
+                                    <div className="w-1/4 font-bold italic text-[#FFD714] text-[22px]">{kol.score}</div>
                                 </div>
                                 {/* 代币推荐 */}
                                 <div className="flex-1 flex items-center px-4 py-3">
