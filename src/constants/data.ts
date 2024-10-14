@@ -74,4 +74,10 @@ export const navItems: NavItem[] = [
 		icon: "kanban",
 		label: "kanban",
 	},
+	{
+		title: "KolRankDataInput",
+		href: "/kolrankdatainput",
+		icon: "kanban",
+		label: "kanban",
+	},
 ];

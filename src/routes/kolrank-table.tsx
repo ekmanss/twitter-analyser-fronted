@@ -1,138 +1,14 @@
-const kol_data = [
-    {
-        kol_name: "Ed",
-        twitter: "Ed_x0101",
-        twitter_avatar:
-            "https://pbs.twimg.com/profile_images/1588828286464888832/RRN2JuTl_400x400.jpg",
-        score: 79,
-        token_recommend: [
-            {
-                token: "TERMINUS",
-                increase: "94.73%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/ethereum/0xcbde0453d4e7d748077c1b0ac2216c011dd2f406.png?size=lg&key=59c8b4",
-            },
-            {
-                token: "SWAG",
-                increase: "222.61%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/ethereum/0x36c7188d64c44301272db3293899507eabb8ed43.png?size=lg&key=b16682",
-            },
-        ],
-    },
-    {
-        kol_name: "韩跑跑",
-        twitter: "Laojiucai_02",
-        twitter_avatar:
-            "https://pbs.twimg.com/profile_images/1801165763371528193/AvCfTG59_400x400.jpg",
-        score: 70.53,
-        token_recommend: [
-            {
-                token: "kheowzoo",
-                increase: "9908.41%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/solana/AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump.png?size=lg&key=f18de7",
-            },
-            {
-                token: "KhaoKheow",
-                increase: "1486.03%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/solana/CLXPjdHA2ikfQVPeQJiy4vomAZseVVMuowUtngRMpump.png?size=lg&key=6bfc74",
-            },
-        ],
-    },
-    {
-        kol_name: "Ed",
-        twitter: "Ed_x0101",
-        twitter_avatar:
-            "https://pbs.twimg.com/profile_images/1588828286464888832/RRN2JuTl_400x400.jpg",
-        score: 79,
-        token_recommend: [
-            {
-                token: "TERMINUS",
-                increase: "94.73%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/ethereum/0xcbde0453d4e7d748077c1b0ac2216c011dd2f406.png?size=lg&key=59c8b4",
-            },
-            {
-                token: "SWAG",
-                increase: "222.61%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/ethereum/0x36c7188d64c44301272db3293899507eabb8ed43.png?size=lg&key=b16682",
-            },
-        ],
-    },
-    {
-        kol_name: "韩跑跑",
-        twitter: "Laojiucai_02",
-        twitter_avatar:
-            "https://pbs.twimg.com/profile_images/1801165763371528193/AvCfTG59_400x400.jpg",
-        score: 70.53,
-        token_recommend: [
-            {
-                token: "kheowzoo",
-                increase: "9908.41%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/solana/AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump.png?size=lg&key=f18de7",
-            },
-            {
-                token: "KhaoKheow",
-                increase: "1486.03%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/solana/CLXPjdHA2ikfQVPeQJiy4vomAZseVVMuowUtngRMpump.png?size=lg&key=6bfc74",
-            },
-        ],
-    },
-    {
-        kol_name: "Ed",
-        twitter: "Ed_x0101",
-        twitter_avatar:
-            "https://pbs.twimg.com/profile_images/1588828286464888832/RRN2JuTl_400x400.jpg",
-        score: 79,
-        token_recommend: [
-            {
-                token: "TERMINUS",
-                increase: "94.73%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/ethereum/0xcbde0453d4e7d748077c1b0ac2216c011dd2f406.png?size=lg&key=59c8b4",
-            },
-            {
-                token: "SWAG",
-                increase: "222.61%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/ethereum/0x36c7188d64c44301272db3293899507eabb8ed43.png?size=lg&key=b16682",
-            },
-        ],
-    },
-    {
-        kol_name: "韩跑跑",
-        twitter: "Laojiucai_02",
-        twitter_avatar:
-            "https://pbs.twimg.com/profile_images/1801165763371528193/AvCfTG59_400x400.jpg",
-        score: 70.53,
-        token_recommend: [
-            {
-                token: "kheowzoo",
-                increase: "9908.41%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/solana/AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump.png?size=lg&key=f18de7",
-            },
-            {
-                token: "KhaoKheow",
-                increase: "1486.03%",
-                token_image:
-                    "https://dd.dexscreener.com/ds-data/tokens/solana/CLXPjdHA2ikfQVPeQJiy4vomAZseVVMuowUtngRMpump.png?size=lg&key=6bfc74",
-            },
-        ],
-    },
-];
-const kol = kol_data[0];
+const KolRankTable: React.FC<any> = ({data}) => {
+    const {kol_data_raw, laomo_raw, geju_raw} = data
 
-export default function KolRankTable() {
+    let kol_data = kol_data_raw;
+    let laomo = laomo_raw;
+    let geju = geju_raw;
+
     return (
         <>
             <div className="c-kol-table flex justify-center mt-0">
-                <div className="c-table-skeleton w-[960px] h-[600px] flex flex-col gap-4 bg-gray-50 p-4">
+                <div className="c-table-skeleton w-[960px] h-[900] flex flex-col gap-4 bg-black p-4">
                     <div className="w-full text-gray-200">
                         {/* Table Header */}
                         <div className="flex mb-4">
@@ -263,11 +139,10 @@ export default function KolRankTable() {
 
 
             {/* Updated laomo div */}
-            <div className="laomo flex justify-center" style={{marginTop: '50px'}}>
+            <div className="c-laomo flex justify-center" style={{marginTop: '30px'}}>
                 <div
                     className="relative w-[960px] h-[80px] rounded-[16px]"
                     style={{
-                        left: '0px',
                         background: 'linear-gradient(90.43deg, rgba(68, 83, 87, 0) 4.21%, #1A1A1A 99.45%)'
                     }}
                 >
@@ -275,18 +150,150 @@ export default function KolRankTable() {
                         <img src="/laomo.png" alt="Left image" className="w-full h-full object-cover"/>
                     </div>
 
+                    {/* 劳模奖文字 */}
+                    <div
+                        className="absolute"
+                        style={{
+                            left: '100px',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            fontFamily: 'FZRuiZhengHeiS-EB-GB, "Microsoft YaHei", sans-serif',
+                            fontSize: '26px',
+                            fontWeight: 400,
+                            lineHeight: '38px',
+                            color: '#FFD714',
+                            WebkitTextStroke: '1px #FFD714',
+                            letterSpacing: '-0.8px',
+                            textShadow: '0 0 1px #FFD714, 0 0 2px #FFD714',
+                            WebkitFontSmoothing: 'antialiased',
+                            MozOsxFontSmoothing: 'grayscale',
+                        }}
+                    >
+                        劳模奖
+                    </div>
+
                     {/* KOL信息 */}
-                    <div className="absolute left-[250px] top-[15px] flex items-center">
+                    <div className="absolute flex items-center"
+                         style={{left: '350px', top: '50%', transform: 'translateY(-50%)'}}>
                         <img
-                            src={kol.twitter_avatar}
-                            alt={kol.kol_name}
+                            src={laomo.twitter_avatar}
+                            alt={laomo.kol_name}
                             className="w-10 h-10 rounded-full mr-3 flex-shrink-0"
                         />
                         <div>
-                            <div className="text-white font-semibold">{kol.kol_name}</div>
-                            <div className="text-gray-400">@{kol.twitter}</div>
+                            <div className="text-white font-semibold">{laomo.kol_name}</div>
+                            <div className="text-gray-400">@{laomo.twitter}</div>
                         </div>
                     </div>
+
+                    {/* 本周推荐项目文字 */}
+                    <div
+                        className="absolute"
+                        style={{
+                            left: '650px',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            fontFamily: 'FZRuiZhengHeiS-EB-GB, "Microsoft YaHei", sans-serif',
+                            fontSize: '19px',
+                            fontWeight: 700,
+                            lineHeight: '22.31px',
+                            color: 'white',
+                            WebkitFontSmoothing: 'antialiased',
+                            MozOsxFontSmoothing: 'grayscale',
+                        }}
+                    >
+                        本周推荐项目
+                    </div>
+
+                    {/* 26个 */}
+                    <div
+                        className="absolute"
+                        style={{
+                            left: '780px',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            fontFamily: 'FZRuiZhengHeiS-EB-GB, "Microsoft YaHei", sans-serif',
+                            fontSize: '36px',
+                            fontWeight: 400,
+                            lineHeight: '42.26px',
+                            color: '#00B7FF',
+                            WebkitFontSmoothing: 'antialiased',
+                            MozOsxFontSmoothing: 'grayscale',
+                        }}
+                    >
+                        26个
+                    </div>
+                </div>
+            </div>
+
+
+            {/* 最能格局奖div */}
+            <div className="c-geju flex justify-center" style={{marginTop: '30px'}}>
+                <div
+                    className="relative w-[960px] h-[80px] rounded-[16px]"
+                    style={{
+                        background: 'linear-gradient(90.43deg, rgba(68, 83, 87, 0) 4.21%, #1A1A1A 99.45%)'
+                    }}
+                >
+                    <div className="absolute top-[-18px] left-0 w-[85px] h-[72px]">
+                        <img src="/geju.png" alt="Left image" className="w-full h-full object-cover"/>
+                    </div>
+
+                    {/* 最能格局奖文字 */}
+                    <div
+                        className="absolute"
+                        style={{
+                            left: '100px',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            fontFamily: 'FZRuiZhengHeiS-EB-GB, "Microsoft YaHei", sans-serif',
+                            fontSize: '26px',
+                            fontWeight: 400,
+                            lineHeight: '38px',
+                            color: '#FFD714',
+                            WebkitTextStroke: '1px #FFD714',
+                            letterSpacing: '-0.8px',
+                            textShadow: '0 0 1px #FFD714, 0 0 2px #FFD714',
+                            WebkitFontSmoothing: 'antialiased',
+                            MozOsxFontSmoothing: 'grayscale',
+                        }}
+                    >
+                        最能格局奖
+                    </div>
+
+                    {/* KOL信息 */}
+                    <div className="absolute flex items-center"
+                         style={{left: '350px', top: '50%', transform: 'translateY(-50%)'}}>
+                        <img
+                            src={geju.twitter_avatar}
+                            alt={geju.kol_name}
+                            className="w-10 h-10 rounded-full mr-3 flex-shrink-0"
+                        />
+                        <div>
+                            <div className="text-white font-semibold">{geju.kol_name}</div>
+                            <div className="text-gray-400">@{geju.twitter}</div>
+                        </div>
+                    </div>
+
+                    {/* 推荐的代币跌幅最少文字 */}
+                    <div
+                        className="absolute"
+                        style={{
+                            left: '650px',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            fontFamily: 'FZRuiZhengHeiS-EB-GB, "Microsoft YaHei", sans-serif',
+                            fontSize: '19px',
+                            fontWeight: 700,
+                            lineHeight: '22.31px',
+                            color: 'white',
+                            WebkitFontSmoothing: 'antialiased',
+                            MozOsxFontSmoothing: 'grayscale',
+                        }}
+                    >
+                        推荐的代币跌幅最少
+                    </div>
+
                 </div>
             </div>
 
@@ -295,3 +302,6 @@ export default function KolRankTable() {
 
     );
 }
+
+
+export default KolRankTable;

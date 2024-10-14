@@ -15,6 +15,7 @@ import InvoicesPage from "./routes/dashboard.invoices";
 import KolRank from "./routes/kolrank";
 import SignInPage from "./routes/sign-in";
 import SignUpPage from "./routes/sign-up";
+import KolRankInputPage from "./routes/kolrank-input";
 
 const router = createBrowserRouter([
 	{
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
 				],
 			},
 			{ path: "/kolrank", element: <KolRank /> },
+			{ path: "/kolrankdatainput", element: <KolRankInputPage /> },
 		],
 	},
 ]);
