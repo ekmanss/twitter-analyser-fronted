@@ -12,6 +12,7 @@ import IndexPage from "./routes";
 import ContactPage from "./routes/contact";
 import DashboardPage from "./routes/dashboard";
 import InvoicesPage from "./routes/dashboard.invoices";
+import KolRank from "./routes/kolrank";
 import SignInPage from "./routes/sign-in";
 import SignUpPage from "./routes/sign-up";
 
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
 					{ path: "/dashboard/invoices", element: <InvoicesPage /> },
 				],
 			},
+			{ path: "/kolrank", element: <KolRank /> },
 		],
 	},
 ]);

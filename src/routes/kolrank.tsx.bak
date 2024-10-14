@@ -1,0 +1,67 @@
+// src/routes/kolrank.tsx
+
+export default function KolRankPage() {
+	return (
+		<div className="bg-black min-h-screen">
+			{/* 第一区域，高度 260px */}
+			<div className="relative h-[260px] overflow-hidden">
+				{/* 第一个图片 */}
+				<img
+					src="/X.png"
+					alt="描述图片的替代文本"
+					className="absolute"
+					style={{
+						width: '88.93px',
+						height: '99.39px',
+						top: '82px',
+						left: '67px',
+					}}
+				/>
+
+				{/* 第二个图片 */}
+				<img
+					src="/FINDER.png"
+					alt="Finder Image"
+					className="absolute"
+					style={{
+						width: '333.47px',
+						height: '99.24px',
+						top: '82.14px',
+						left: '167.16px',
+					}}
+				/>
+
+				{/* 第三个图片 */}
+				<img
+					src="/fwg_raw.png"
+					alt="FWG Raw Image"
+					className="absolute"
+					style={{
+						width: '311px',
+						height: '401px',
+						top: '24px',
+						left: '148px',
+						// opacity: 0, // 如果希望图片可见，请设置为 1 或移除该属性
+					}}
+				/>
+
+				{/* 第一区域的其他内容 */}
+			</div>
+
+			{/* 第二区域，高度 75px */}
+			<div className="h-[75px]">
+				{/* 在此添加第二区域的内容 */}
+			</div>
+
+			{/* 第三区域，高度 984px */}
+			<div className="h-[984px]">
+				{/* 在此添加第三区域的内容 */}
+			</div>
+
+			{/* 第四区域，高度 435px */}
+			<div className="h-[435px]">
+				{/* 在此添加第四区域的内容 */}
+			</div>
+		</div>
+	);
+}

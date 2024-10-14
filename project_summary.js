@@ -2,7 +2,7 @@ import { generateRepoContext } from "ekmanss-js-tools";
 
 async function main() {
 	const params = {
-		repoPath: "/Users/linchuan/WebstormProjects/next-shadcn-dashboard-starter",
+		repoPath: "./",
 		outputFile: "output.md",
 		options: {
 			treeIgnorePatterns: ["**/.git/**"],
