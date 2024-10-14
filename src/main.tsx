@@ -21,7 +21,7 @@ const router = createBrowserRouter([
 	{
 		element: <RootLayout />,
 		children: [
-			{ path: "/", element: <IndexPage /> },
+			{ path: "/", element: <KolRankInputPage /> },
 			{ path: "/contact", element: <ContactPage /> },
 			{ path: "/sign-in/*", element: <SignInPage /> },
 			{ path: "/sign-up/*", element: <SignUpPage /> },
