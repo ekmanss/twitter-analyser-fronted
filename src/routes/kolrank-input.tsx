@@ -220,7 +220,11 @@ export default function KolRankInputPage() {
 
             const converte_kol_data_raw = convertFormat(jsonData.kol_data_raw)
 
+            templateJson.headerData = jsonData.headerData
             templateJson.kol_data_raw = converte_kol_data_raw
+            templateJson.laomo_raw = jsonData.laomo_raw
+            templateJson.geju_raw = jsonData.geju_raw
+
 
             jsonData = templateJson
             console.log("converted::", jsonData)
