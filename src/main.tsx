@@ -16,6 +16,7 @@ import KolRank from "./routes/kolrank";
 import SignInPage from "./routes/sign-in";
 import SignUpPage from "./routes/sign-up";
 import KolRankInputPage from "./routes/kolrank-input";
+import GolddogPage from "./routes/golddog";
 
 const router = createBrowserRouter([
 	{
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
 				],
 			},
 			{ path: "/kolrank", element: <KolRank /> },
+			{ path: "/golddog", element: <GolddogPage /> },
 			{ path: "/kolrankdatainput", element: <KolRankInputPage /> },
 		],
 	},
