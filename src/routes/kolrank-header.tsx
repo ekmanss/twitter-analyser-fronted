@@ -53,7 +53,7 @@ const RightImageGroup: React.FC<{ title: string }> = ({ title }) => {
                         gradient="linear-gradient(91.02deg, rgba(255, 146, 0, 0.6) 1.49%, rgba(255, 204, 0, 0.6) 40.53%, rgba(223, 128, 0, 0.6) 97.9%)"
                         style={{
                             fontFamily: "PingFang SC",
-                            fontSize: "22px",
+                            fontSize: "20px",
                             fontWeight: 400,
                             lineHeight: "33.6px",
                             letterSpacing: "0.35em",
