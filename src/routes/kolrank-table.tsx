@@ -297,6 +297,8 @@ const KolRankTable: React.FC<any> = ({data}) => {
                 </div>
             </div>
 
+            <div className="h-14 bg-black"></div>
+
         </>
 
 
